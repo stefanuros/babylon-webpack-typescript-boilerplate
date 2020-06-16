@@ -43,9 +43,7 @@ engine.runRenderLoop(() => {
 
 showWorldAxis(100);
 
-loadPlane().then(x => {
-  console.log(x)
-});
+loadPlane();
 
 async function loadPlane() {
   let plane = await SceneLoader.ImportMeshAsync(null, '/', gltf, scene);
