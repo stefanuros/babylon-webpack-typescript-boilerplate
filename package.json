@@ -1,7 +1,7 @@
 {
-  "name": "3d_boids",
+  "name": "babylon-webpack-typescript-boilerplate",
   "version": "1.0.0",
-  "description": "A 3D boids simulation using WebGL",
+  "description": "babylon-webpack-typescript-boilerplate",
   "main": "index.ts",
   "scripts": {
     "start": "webpack-dev-server --mode development --devtool eval-source-map --hot",
