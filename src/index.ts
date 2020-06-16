@@ -12,6 +12,8 @@ import {
 } from 'babylonjs';
 import 'babylonjs-loaders';
 
+import * as Stats from 'stats.js';
+
 // Import our glTF model.
 import * as gltf from '../assets/aviao_low_poly/scene.gltf';
 
@@ -24,14 +26,20 @@ const camera = new ArcRotateCamera("camera1", 0, 1, 220, new Vector3(0, 0, 0), s
 camera.attachControl(canvas, false);
 camera.position = new Vector3(15, 15, 15);
 
-// Load the glTF model and add it to the scene.
-// SceneLoader.Append("/", gltf, scene);
+// Setting up the stats panel 
+const stats = new Stats();
+stats.showPanel(0);
+document.body.appendChild(stats.dom);
 
 // Instruct the engine to resize when the window does.
 window.addEventListener('resize', () => engine.resize());
 
 // Start the engine's main render loop.
-engine.runRenderLoop(() => scene.render());
+engine.runRenderLoop(() => {
+  stats.begin();
+  scene.render()
+  stats.end();
+});
 
 showWorldAxis(100);
 

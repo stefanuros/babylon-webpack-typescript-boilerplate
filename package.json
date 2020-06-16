@@ -20,7 +20,9 @@
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
+    "@types/stats.js": "0.17.0",
     "babylonjs": "4.1.0",
-    "babylonjs-loaders": "4.1.0"
+    "babylonjs-loaders": "4.1.0",
+    "stats.js": "0.17.0"
   }
 }
