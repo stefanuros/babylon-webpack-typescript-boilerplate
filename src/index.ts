@@ -40,9 +40,7 @@ loadPlane().then(x => {
 });
 
 async function loadPlane() {
-  console.log(gltf)
   let plane = await SceneLoader.ImportMeshAsync(null, '/', gltf, scene);
-  console.log(plane);
   plane.meshes[0].rotation = new Vector3(0, Math.PI + Math.PI/4, 0);
   return plane;
 }
